@@ -2,6 +2,9 @@ import SassGlob from 'vite-plugin-sass-glob-import';
 import { defineConfig } from 'vite';
 import { sync } from 'glob';
 
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';//https://github.com/FatehAK/vite-plugin-image-optimizer
+
+
 const noAttr = () => {
   return {
     transformIndexHtml(html) {
@@ -14,6 +17,23 @@ export default defineConfig({
   plugins: [
     SassGlob(),
     noAttr(),
+    ViteImageOptimizer({
+      png: {
+        // https://sharp.pixelplumbing.com/api-output#png
+        quality: 70,
+      },
+      jpeg: {
+        // https://sharp.pixelplumbing.com/api-output#jpeg
+        quality: 40,
+      },
+      jpg: {
+        // https://sharp.pixelplumbing.com/api-output#jpeg
+        quality: 40,
+      },       
+      webp: {
+        quality: 40,					
+      }
+    }),
   ],
   build: {
     rollupOptions: {
