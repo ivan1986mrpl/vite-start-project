@@ -1,6 +1,6 @@
 import SassGlob from 'vite-plugin-sass-glob-import';
-import { defineConfig } from 'vite'
-import { sync } from 'glob'
+import { defineConfig } from 'vite';
+import { sync } from 'glob';
 
 const noAttr = () => {
   return {

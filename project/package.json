@@ -11,6 +11,11 @@
     "glob": "^11.0.1",
     "sass": "^1.85.0",
     "vite": "^6.1.0",
-    "vite-plugin-sass-glob-import": "^5.0.0"
-  }
+    "vite-plugin-sass-glob-import": "^5.0.0",
+
+    "autoprefixer": "^10.4.20"
+  },
+  "browserslist": [
+		"last 3 versions"
+	]
 }
